@@ -13,7 +13,7 @@ services:
       - /app/node_modules
     command: npm run start:dev
     environment:
-      - DATABASE_URL=postgresql://postgres:password@postgres:5432/mydb
+      - DATABASE_URL=postgresql://postgres:password@postgres:5432/nokoroa_db
       - FRONTEND_URL=http://localhost:3000
     depends_on:
       - postgres
@@ -26,7 +26,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: postgres
+      POSTGRES_DB: nokoroa_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
